@@ -1,0 +1,11 @@
+<ul>
+  <li>
+    <h2 [routerLink]="['/blog-details/', blog.id]">Tiêu đề: {{blog.title}}</h2>
+  </li>
+  <li>
+    <p>Nội dung: {{blog.content}}</p>
+  </li>
+  <li>
+    <p>Ngày tạo: {{blog.createdAt | date: 'dd/MM/yyyy, h:mm a'}}</p>
+  </li>
+</ul>

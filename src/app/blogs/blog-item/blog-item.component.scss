@@ -1,0 +1,16 @@
+:host {
+  ul {
+    border: 1px solid;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 17px -1px;
+      transition: all 0.4s ease-in-out;
+    }
+
+    h2 {
+      cursor: pointer;
+    }
+  }
+}

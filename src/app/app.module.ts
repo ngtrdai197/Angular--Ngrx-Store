@@ -1,16 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
+import { RouterModule } from "@angular/router";
+import { routes } from "./app.routes";
+import { StoreModule } from "@ngrx/store";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { environment } from "src/environments/environment.prod";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
