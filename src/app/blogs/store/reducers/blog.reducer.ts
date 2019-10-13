@@ -97,10 +97,10 @@ export const initialState: BlogState = {
   loading: false
 };
 
-export function reducer(
+export const reducer = (
   state = initialState,
   action: fromBlogsAcion.BlogsAction
-): BlogState {
+): BlogState => {
   switch (action.type) {
     case fromBlogsAcion.LOAD_BLOGS:
       return { ...state, loading: true };
@@ -116,7 +116,7 @@ export function reducer(
     default:
       return state;
   }
-}
+};
 
 export const getBlogsLoading = (state: BlogState) => state.loading;
 export const getBlogsLoaded = (state: BlogState) => state.loaded;

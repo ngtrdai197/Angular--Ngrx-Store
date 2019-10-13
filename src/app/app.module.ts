@@ -3,10 +3,9 @@ import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
 import { RouterModule } from "@angular/router";
-import { routes } from "./app.routes";
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
-import { environment } from "src/environments/environment.prod";
+import { routes } from "./app.routes";
 
 @NgModule({
   declarations: [AppComponent],
