@@ -1,1 +1,1 @@
-git status && git add . && git commit -m "$0"
+git status && git add . && git commit -m "$1" && git push origin master
